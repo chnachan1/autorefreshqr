@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>哇咔咔</title>
+    <title>哇啦哇啦</title>
     <style>
         body {
             text-align: center;
@@ -24,12 +24,12 @@
         // 初始加载二维码
         window.onload = function() {
             refreshQRCode();
-            setInterval(refreshQRCode, 500); // 每 1 秒刷新一次
+            setInterval(refreshQRCode, 1000); // 每 1 秒刷新一次
         };
     </script>
 </head>
 <body>
-    <h2>乱七八糟</h2>
+    <h2>自动刷新二维码</h2>
     <img id="qrCode" src="" alt="二维码">
 </body>
 </html>
