@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哇咔咔</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 20px;
+        }
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+    <script>
+        function refreshQRCode() {
+            let qrImg = document.getElementById("qrCode");
+            let timestamp = new Date().getTime(); // 防止缓存
+            qrImg.src = "http://www.jsscme.com/hyt/Admin/ewm/qrcode52971.png?t=" + timestamp;
+        }
+
+        // 初始加载二维码
+        window.onload = function() {
+            refreshQRCode();
+            setInterval(refreshQRCode, 1000); // 每 1 秒刷新一次
+        };
+    </script>
+</head>
+<body>
+    <h2>自动刷新二维码</h2>
+    <img id="qrCode" src="" alt="二维码">
+</body>
+</html>
